@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ज्ञानू AI प्रश्नोत्तर एवं बोर्ड PYQ बैंक | कक्षा 10 विज्ञान (RBSE) - ऋषि सर</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-mid: #1d4ed8;
+      --primary-light: #3b82f6;
+      --accent: #f97316;
+      --accent-dark: #ea580c;
+      --success: #16a34a;
+      --success-bg: #dcfce7;
+      --bg-main: #f0f4f8;
+      --card-bg: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border-color: #cbd5e1;
+      --header-grad: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #f97316 100%);
+      --banner-grad: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 14px 34px rgba(30, 58, 138, 0.16);
+    }
+
+    body.dark-mode {
+      --bg-main: #0b1120;
+      --card-bg: #1e293b;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: #334155;
+      --banner-grad: linear-gradient(135deg, #020617 0%, #0f172a 60%, #1e3a8a 100%);
+      --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+      --shadow-lg: 0 14px 34px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      padding-bottom: 30px;
+    }
+
+    .app-container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 12px 14px;
+    }
+
+    /* ================= HEADER ================= */
+    .top-header {
+      background: var(--header-grad);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 18px 22px;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .owl-logo {
+      width: 62px;
+      height: 62px;
+      background: #ffffff;
+      border-radius: 50%;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      border: 2px solid #fde047;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .owl-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .brand-titles h1 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.25;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .brand-titles p {
+      font-size: 0.9rem;
+      opacity: 0.95;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    .creator-pill {
+      display: inline-block;
+      background: rgba(255,255,255,0.22);
+      backdrop-filter: blur(6px);
+      padding: 3px 12px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      margin-top: 6px;
+      border: 1px solid rgba(255,255,255,0.35);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .action-btn {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.38);
+      padding: 8px 13px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .action-btn:hover {
+      background: rgba(255, 255, 255, 0.32);
+      transform: translateY(-1px);
+    }
+
+    .action-btn.active-mode {
+      background: #fde047;
+      color: #0f172a;
+      border-color: #fde047;
+    }
+
+    /* ================= PROGRESS DASHBOARD ================= */
+    .stats-dashboard {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .stats-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .stat-badges {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .stat-chip {
+      padding: 5px 12px;
+      border-radius: 10px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .chip-total { background: rgba(59, 130, 246, 0.12); color: #2563eb; }
+    .chip-pyq { background: rgba(245, 158, 11, 0.16); color: #b45309; }
+    .chip-done { background: rgba(22, 163, 74, 0.14); color: #16a34a; }
+    .chip-rem { background: rgba(249, 115, 22, 0.14); color: #ea580c; }
+
+    body.dark-mode .chip-total { color: #60a5fa; }
+    body.dark-mode .chip-pyq { color: #fbbf24; }
+    body.dark-mode .chip-done { color: #4ade80; }
+    body.dark-mode .chip-rem { color: #fb923c; }
+
+    .progress-track {
+      width: 100%;
+      height: 9px;
+      background: var(--bg-main);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #f97316, #eab308, #16a34a);
+      border-radius: 999px;
+      transition: width 0.4s ease;
+    }
+
+    /* ================= SUBJECT BRANCH & CHAPTER SELECTOR ================= */
+    .nav-panel {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 15px 18px;
+      margin-top: 14px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .branch-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .branch-tab {
+      background: var(--bg-main);
+      color: var(--text-main);
+      border: 1.5px solid var(--border-color);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .branch-tab.active {
+      background: var(--primary-mid);
+      color: #ffffff;
+      border-color: var(--primary-mid);
+      box-shadow: 0 4px 12px rgba(29, 78, 216, 0.28);
+    }
+
+    .select-search-row {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 10px;
+    }
+
+    @media (max-width: 680px) {
+      .select-search-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .chapter-dropdown, .search-box-input {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 12px;
+      border: 2px solid var(--border-color);
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      font-weight: 700;
+      outline: none;
+    }
+
+    .chapter-dropdown:focus, .search-box-input:focus {
+      border-color: var(--primary-light);
+    }
+
+    /* ================= CHAPTER PDF BANNER & IN-APP PDF VIEWER ================= */
+    .chapter-pdf-card {
+      background: var(--banner-grad);
+      color: #ffffff;
+      border-radius: 18px;
+      padding: 16px 20px;
+      margin-top: 14px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .pdf-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .pdf-info h2 {
+      font-size: 1.18rem;
+      font-weight: 800;
+      line-height: 1.3;
+    }
+
+    .pdf-info p {
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+
+    .pdf-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .pdf-btn {
+      padding: 9px 14px;
+      border-radius: 11px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-preview-toggle {
+      background: #f97316;
+      color: #ffffff;
+    }
+    .btn-preview-toggle:hover { background: #ea580c; }
+
+    .btn-open-drive {
+      background: rgba(255,255,255,0.16);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .btn-dl-file {
+      background: #16a34a;
+      color: #ffffff;
+    }
+
+    .pdf-embed-drawer {
+      display: none;
+      margin-top: 14px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.22);
+      background: #0f172a;
+    }
+
+    .pdf-embed-drawer.open {
+      display: block;
+    }
+
+    /* ================= QUESTION TYPE & BOARD YEAR FILTER PILLS ================= */
+    .q-filter-bar {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      align-items: center;
+    }
+
+    .q-pill {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1.5px solid var(--border-color);
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .q-pill.active {
+      background: #fef3c7;
+      border-color: #f59e0b;
+      color: #92400e;
+      box-shadow: 0 3px 10px rgba(245, 158, 11, 0.22);
+    }
+
+    /* ================= QUESTIONS LIST ================= */
+    .qa-list-container {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .qa-card {
+      background: var(--card-bg);
+      border: 2px solid var(--border-color);
+      border-radius: 18px;
+      padding: 16px 18px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .qa-card.pyq-card {
+      border-color: #f59e0b;
+      background: linear-gradient(145deg, var(--card-bg), rgba(254, 243, 199, 0.18));
+    }
+
+    .qa-card.mastered-card {
+      border-color: var(--success);
+      background: linear-gradient(145deg, var(--card-bg), rgba(22, 163, 74, 0.08));
+    }
+
+    .qa-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .qa-badge-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .q-num-pill {
+      background: var(--primary);
+      color: #ffffff;
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+    }
+
+    .cat-tag {
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .qa-card.pyq-card .cat-tag {
+      background: linear-gradient(135deg, #fef3c7, #fde68a);
+      color: #92400e;
+      border: 1.5px solid #f59e0b;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25);
+    }
+
+    .qa-tools {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tool-circle-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border-color);
+      background: var(--bg-main);
+      color: var(--text-main);
+      font-size: 0.95rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s;
+    }
+
+    .tool-circle-btn:active {
+      transform: scale(0.9);
+    }
+
+    .qa-question-text {
+      font-size: 1.12rem;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.48;
+      margin-bottom: 10px;
+    }
+
+    .qa-answer-box {
+      background: var(--bg-main);
+      border-left: 4px solid var(--success);
+      padding: 12px 14px;
+      border-radius: 12px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: var(--text-main);
+      line-height: 1.6;
+      transition: all 0.2s ease;
+    }
+
+    .qa-answer-box.hidden-answer {
+      filter: blur(6px);
+      user-select: none;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .reveal-hint {
+      display: none;
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: var(--accent-dark);
+      margin-top: 6px;
+      cursor: pointer;
+    }
+
+    .qa-card.answer-masked .reveal-hint {
+      display: inline-block;
+    }
+
+    .formula-pill {
+      display: inline-block;
+      background: linear-gradient(135deg, #ede9fe, #dbeafe);
+      color: #1e3a8a;
+      border: 1.5px solid #818cf8;
+      padding: 2px 9px;
+      border-radius: 8px;
+      font-family: 'Poppins', monospace;
+      font-weight: 800;
+      font-size: 0.95em;
+      margin: 2px 2px;
+    }
+
+    .qa-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border-color);
+    }
+
+    .qa-foot-btn {
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      border: 1.5px solid var(--border-color);
+      background: var(--bg-main);
+      color: var(--text-main);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .qa-foot-btn.btn-done.is-mastered {
+      background: var(--success);
+      color: #ffffff;
+      border-color: var(--success);
+    }
+
+    .qa-foot-btn.btn-wa {
+      background: #dcfce7;
+      color: #166534;
+      border-color: #86efac;
+    }
+
+    /* ================= FOOTER ================= */
+    .footer-card {
+      margin-top: 26px;
+      background: var(--header-grad);
+      color: #fff;
+      border-radius: 18px;
+      padding: 18px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .wa-btn {
+      background: #25D366;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .confetti-piece {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      top: -10px;
+      z-index: 9999;
+      pointer-events: none;
+      animation: fall 2.5s linear forwards;
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-container">
+  <!-- HEADER -->
+  <header class="top-header">
+    <div class="brand-left">
+      <div class="owl-logo" title="Gyanu AI By Rishi Sir">
+        <img src="channels4_profile (1).jpg" alt="Gyanu AI" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22><rect width=%22120%22 height=%22120%22 rx=%2260%22 fill=%22%231e3a8a%22/><text x=%2260%22 y=%2262%22 font-family=%22Arial%22 font-weight=%22bold%22 font-size=%2217%22 fill=%22%23ffd166%22 text-anchor=%22middle%22>Gyanu AI</text><text x=%2260%22 y=%2282%22 font-family=%22Arial%22 font-weight=%22bold%22 font-size=%2211%22 fill=%22%23ffffff%22 text-anchor=%22middle%22>By Rishi Sir</text></svg>';" />
+      </div>
+      <div class="brand-titles">
+        <h1>ज्ञानू AI प्रश्नोत्तर एवं बोर्ड PYQ बैंक</h1>
+        <p>RBSE कक्षा 10 विज्ञान — संपूर्ण 13 अध्याय अभ्यास प्रश्न व पिछले 3 वर्षों (2024–2026) के बोर्ड प्रश्न</p>
+        <span class="creator-pill">✨ क्या आप जानते हैं यह आपके लिए किसने तैयार किया है? — हाँ, आपके ऋषि सर!</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="action-btn" id="selfTestBtn" onclick="toggleSelfTestMode()" title="उत्तर छुपाकर खुद टेस्ट लें">🙈 सेल्फ-टेस्ट मोड (उत्तर छुपाएँ)</button>
+      <button class="action-btn" id="themeBtn" onclick="toggleDarkMode()">🌙 नाइट मोड</button>
+      <button class="action-btn" onclick="resetProgress()">🔄 रीसेट</button>
+    </div>
+  </header>
+
+  <!-- GAMIFIED PROGRESS DASHBOARD -->
+  <section class="stats-dashboard">
+    <div class="stats-top-row">
+      <div class="stat-badges">
+        <span class="stat-chip chip-total">📚 कुल प्रश्न (13 अध्याय): <strong id="statTotal">0</strong></span>
+        <span class="stat-chip chip-pyq">🏆 बोर्ड PYQs (2024–26): <strong id="statPYQ">0</strong></span>
+        <span class="stat-chip chip-done">✅ तैयार हो गए: <strong id="statDone">0</strong></span>
+        <span class="stat-chip chip-rem">⏳ बाकी हैं: <strong id="statRem">0</strong></span>
+      </div>
+      <div style="font-size:0.8rem;font-weight:700;color:var(--text-muted);">
+        💡🔊 स्पीकर बटन दबाकर किसी भी प्रश्न और उत्तर को आवाज़ में सुनें!
+      </div>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progressBar"></div>
+    </div>
+  </section>
+
+  <!-- SUBJECT BRANCH TABS & CHAPTER SELECTOR -->
+  <section class="nav-panel">
+    <div class="branch-tabs">
+      <button class="branch-tab active" onclick="filterByBranch('all', this)">📚 सभी 13 अध्याय</button>
+      <button class="branch-tab" onclick="filterByBranch('chem', this)">🧪 रसायन विज्ञान (Ch 1–4)</button>
+      <button class="branch-tab" onclick="filterByBranch('bio', this)">🧬 जीव विज्ञान (Ch 5–8, 13)</button>
+      <button class="branch-tab" onclick="filterByBranch('phy', this)">⚡ भौतिक विज्ञान (Ch 9–12)</button>
+    </div>
+
+    <div class="select-search-row">
+      <select id="chapterSelect" class="chapter-dropdown" onchange="onChapterChange()"></select>
+      <input type="text" id="searchInput" class="search-box-input" placeholder="🔍 प्रश्न, उत्तर या बोर्ड वर्ष (2024, 2025, 2026) खोजें..." oninput="renderQuestions()" />
+    </div>
+  </section>
+
+  <!-- CHAPTER COMPLETE Q&A PDF VIEWER & DOWNLOAD BANNER -->
+  <section class="chapter-pdf-card">
+    <div class="pdf-card-top">
+      <div class="pdf-info">
+        <div style="font-size:0.78rem;font-weight:800;color:#fde047;" id="bannerBranchTag">🧪 रसायन विज्ञान • अध्याय 1</div>
+        <h2 id="bannerTitle">अध्याय 1: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)</h2>
+        <p>इस अध्याय के सभी आंतरिक प्रश्न, अभ्यास प्रश्न और बोर्ड परीक्षा प्रश्नों की मूल PDF फाइल यहाँ से पढ़ें या डाउनलोड करें:</p>
+      </div>
+      <div class="pdf-actions">
+        <button class="pdf-btn btn-preview-toggle" onclick="togglePdfDrawer()" id="pdfToggleBtn">👁️ यहीं PDF खोलें</button>
+        <a id="bannerViewLink" href="#" target="_blank" rel="noopener noreferrer" class="pdf-btn btn-open-drive">🚀 फुल-स्क्रीन PDF</a>
+        <a id="bannerDlLink" href="#" target="_blank" rel="noopener noreferrer" class="pdf-btn btn-dl-file">📥 PDF डाउनलोड करें</a>
+      </div>
+    </div>
+
+    <div class="pdf-embed-drawer" id="pdfEmbedDrawer">
+      <iframe id="pdfFrame" src="" width="100%" height="440" style="border:none;"></iframe>
+    </div>
+  </section>
+
+  <!-- QUESTION CATEGORY & EXACT BOARD YEAR FILTER PILLS -->
+  <div class="q-filter-bar">
+    <button class="q-pill active" onclick="setQuestionFilter('all', this)">📚 सभी प्रश्न (<span id="cntAll">0</span>)</button>
+    <button class="q-pill" onclick="setQuestionFilter('pyq', this)">🏆 सभी बोर्ड PYQs (<span id="cntPYQ">0</span>)</button>
+    <button class="q-pill" onclick="setQuestionFilter('2026', this)">🔥 Board 2026</button>
+    <button class="q-pill" onclick="setQuestionFilter('2025', this)">⭐ Board 2025</button>
+    <button class="q-pill" onclick="setQuestionFilter('2024', this)">✨ Board 2024</button>
+    <button class="q-pill" onclick="setQuestionFilter('intext', this)">📘 पाठ के आंतरिक प्रश्न</button>
+    <button class="q-pill" onclick="setQuestionFilter('exercise', this)">📗 पाठ्यपुस्तक अभ्यास</button>
+  </div>
+
+  <!-- INTERACTIVE Q&A CARDS LIST -->
+  <main class="qa-list-container" id="qaListContainer"></main>
+
+  <!-- FOOTER -->
+  <footer class="footer-card">
+    <div>
+      <h3 style="font-size:1.1rem;font-weight:800;">🦉 GYANU AI By Rishi Sir — बोर्ड परीक्षा में 100% सफलता की गारंटी!</h3>
+      <p style="font-size:0.86rem;opacity:0.92;">सटीक बोर्ड उत्तर और पिछले 3 वर्षों (2024–2026) के हल सहित प्रश्न एक ही जगह!</p>
+    </div>
+    <a href="https://wa.me/919251477188?text=%E0%A4%A8%E0%A4%AE%E0%A4%B8%E0%A5%8D%E0%A4%A4%E0%A5%87%20%E0%A4%8B%E0%A4%B7%E0%A4%BF%20%E0%A4%B8%E0%A4%B0%2C%20%E0%A4%AE%E0%A5%81%E0%A4%9D%E0%A5%87%20%E0%A4%95%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%BE%2010%20%E0%A4%B5%E0%A4%BF%E0%A4%9C%E0%A5%8D%E0%A4%9E%E0%A4%BE%E0%A4%A8%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%B6%E0%A5%8D%E0%A4%A8%E0%A5%8B%E0%A4%A4%E0%A5%8D%E0%A4%A4%E0%A4%B0%20%E0%A4%AC%E0%A5%88%E0%A4%82%E0%A4%95%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B8%E0%A4%B9%E0%A4%BE%E0%A4%AF%E0%A4%A4%E0%A4%BE%20%E0%A4%9A%E0%A4%BE%E0%A4%B9%E0%A4%BF%E0%A4%8F%E0%A5%A4" target="_blank" rel="noopener noreferrer" class="wa-btn">
+      📲 ऋषि सर WhatsApp सहायता: 9251477188
+    </a>
+  </footer>
+</div>
+
+<script>
+  const chaptersMeta = {"1": {"ch": 1, "title": "अध्याय 1: रासायनिक अभिक्रियाएँ एवं समीकरण", "enTitle": "Chemical Reactions and Equations", "branch": "chem", "branchName": "🧪 रसायन विज्ञान", "pdfTitle": "अध्याय 1: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1wzdR3T9_B3oBGJ5Pec5NsaOG1M80ivLJ/preview", "viewUrl": "https://drive.google.com/file/d/1wzdR3T9_B3oBGJ5Pec5NsaOG1M80ivLJ/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1wzdR3T9_B3oBGJ5Pec5NsaOG1M80ivLJ"}, "2": {"ch": 2, "title": "अध्याय 2: अम्ल, क्षारक एवं लवण", "enTitle": "Acids, Bases and Salts", "branch": "chem", "branchName": "🧪 रसायन विज्ञान", "pdfTitle": "अध्याय 2: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1mkM4pRrCiZOB79CVYCMGvYUib6Didk1C/preview", "viewUrl": "https://drive.google.com/file/d/1mkM4pRrCiZOB79CVYCMGvYUib6Didk1C/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1mkM4pRrCiZOB79CVYCMGvYUib6Didk1C"}, "3": {"ch": 3, "title": "अध्याय 3: धातु एवं अधातु", "enTitle": "Metals and Non-metals", "branch": "chem", "branchName": "🧪 रसायन विज्ञान", "pdfTitle": "अध्याय 3: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1KR4OsG9JnU66jq2Qd0_GlpEQuHoemioH/preview", "viewUrl": "https://drive.google.com/file/d/1KR4OsG9JnU66jq2Qd0_GlpEQuHoemioH/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1KR4OsG9JnU66jq2Qd0_GlpEQuHoemioH"}, "4": {"ch": 4, "title": "अध्याय 4: कार्बन एवं उसके यौगिक", "enTitle": "Carbon and its Compounds", "branch": "chem", "branchName": "🧪 रसायन विज्ञान", "pdfTitle": "अध्याय 4: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1-C-ziQCNGOt9i2l4l_X9SiUOgnxTvRgD/preview", "viewUrl": "https://drive.google.com/file/d/1-C-ziQCNGOt9i2l4l_X9SiUOgnxTvRgD/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1-C-ziQCNGOt9i2l4l_X9SiUOgnxTvRgD"}, "5": {"ch": 5, "title": "अध्याय 5: जैव प्रक्रम", "enTitle": "Life Processes", "branch": "bio", "branchName": "🧬 जीव विज्ञान", "pdfTitle": "अध्याय 5: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1kZaZPVUITmL-x14zPTQyz45gteKzLFo8/preview", "viewUrl": "https://drive.google.com/file/d/1kZaZPVUITmL-x14zPTQyz45gteKzLFo8/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1kZaZPVUITmL-x14zPTQyz45gteKzLFo8"}, "6": {"ch": 6, "title": "अध्याय 6: नियंत्रण एवं समन्वय", "enTitle": "Control and Coordination", "branch": "bio", "branchName": "🧬 जीव विज्ञान", "pdfTitle": "अध्याय 6: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1BCcjp8sBxDRCVDE-bZcqZNE_2CNNuNXO/preview", "viewUrl": "https://drive.google.com/file/d/1BCcjp8sBxDRCVDE-bZcqZNE_2CNNuNXO/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1BCcjp8sBxDRCVDE-bZcqZNE_2CNNuNXO"}, "7": {"ch": 7, "title": "अध्याय 7: जीव जनन कैसे करते हैं?", "enTitle": "How do Organisms Reproduce?", "branch": "bio", "branchName": "🧬 जीव विज्ञान", "pdfTitle": "अध्याय 7: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1D8ywd5b0noW7UmiB6iHeCwxvWEbFe3mC/preview", "viewUrl": "https://drive.google.com/file/d/1D8ywd5b0noW7UmiB6iHeCwxvWEbFe3mC/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1D8ywd5b0noW7UmiB6iHeCwxvWEbFe3mC"}, "8": {"ch": 8, "title": "अध्याय 8: आनुवंशिकता एवं जैव विकास", "enTitle": "Heredity and Evolution", "branch": "bio", "branchName": "🧬 जीव विज्ञान", "pdfTitle": "अध्याय 8: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1EgJ0Z8KX_u5ZAq9FxgVa8Uoq7LN5-E3-/preview", "viewUrl": "https://drive.google.com/file/d/1EgJ0Z8KX_u5ZAq9FxgVa8Uoq7LN5-E3-/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1EgJ0Z8KX_u5ZAq9FxgVa8Uoq7LN5-E3-"}, "9": {"ch": 9, "title": "अध्याय 9: प्रकाश - परावर्तन तथा अपवर्तन", "enTitle": "Light - Reflection and Refraction", "branch": "phy", "branchName": "⚡ भौतिक विज्ञान", "pdfTitle": "अध्याय 9: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/10xVVSxRZeigqT2as2Ua0rxKRoUNLvyXy/preview", "viewUrl": "https://drive.google.com/file/d/10xVVSxRZeigqT2as2Ua0rxKRoUNLvyXy/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=10xVVSxRZeigqT2as2Ua0rxKRoUNLvyXy"}, "10": {"ch": 10, "title": "अध्याय 10: मानव नेत्र तथा रंग-बिरंगा संसार", "enTitle": "The Human Eye and the Colorful World", "branch": "phy", "branchName": "⚡ भौतिक विज्ञान", "pdfTitle": "अध्याय 10: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/19wMN9D3FTNiNVi4K2zFBmmmx5pZPcivZ/preview", "viewUrl": "https://drive.google.com/file/d/19wMN9D3FTNiNVi4K2zFBmmmx5pZPcivZ/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=19wMN9D3FTNiNVi4K2zFBmmmx5pZPcivZ"}, "11": {"ch": 11, "title": "अध्याय 11: विद्युत", "enTitle": "Electricity", "branch": "phy", "branchName": "⚡ भौतिक विज्ञान", "pdfTitle": "अध्याय 11: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1a2AGrQcOxNy1xbDyDisQjf4_B18I1Y8I/preview", "viewUrl": "https://drive.google.com/file/d/1a2AGrQcOxNy1xbDyDisQjf4_B18I1Y8I/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1a2AGrQcOxNy1xbDyDisQjf4_B18I1Y8I"}, "12": {"ch": 12, "title": "अध्याय 12: विद्युत धारा के चुंबकीय प्रभाव", "enTitle": "Magnetic Effects of Electric Current", "branch": "phy", "branchName": "⚡ भौतिक विज्ञान", "pdfTitle": "अध्याय 12: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1H83W73A8xBQ5WwA0SQ-adTPtWbGkXant/preview", "viewUrl": "https://drive.google.com/file/d/1H83W73A8xBQ5WwA0SQ-adTPtWbGkXant/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1H83W73A8xBQ5WwA0SQ-adTPtWbGkXant"}, "13": {"ch": 13, "title": "अध्याय 13: हमारा पर्यावरण", "enTitle": "Our Environment", "branch": "bio", "branchName": "🧬 जीव विज्ञान", "pdfTitle": "अध्याय 13: संपूर्ण प्रश्नोत्तर बैंक व बोर्ड PYQs (PDF)", "previewUrl": "https://drive.google.com/file/d/1ktbPmzc2qMl37VA8JKnkuJvjJSqbw9jm/preview", "viewUrl": "https://drive.google.com/file/d/1ktbPmzc2qMl37VA8JKnkuJvjJSqbw9jm/view?usp=drivesdk", "downloadUrl": "https://drive.google.com/uc?export=download&id=1ktbPmzc2qMl37VA8JKnkuJvjJSqbw9jm"}};
+  const masterQAData = {"1": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "वायु में जलाने से पहले मैग्नीशियम रिबन को साफ़ क्यों किया जाता है?", "a": "मैग्नीशियम नम वायु से क्रिया कर अपनी सतह पर मैग्नीशियम ऑक्साइड ($MgO$) की अक्रिय परत बना लेता है जो जलने में बाधा डालती है। इसे रेगमाल से रगड़कर साफ़ किया जाता है ताकि शुद्ध धातु आसानी से जल सके।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "किसी पदार्थ 'X' के विलयन का उपयोग सफ़ेदी करने के लिए होता है: (i) पदार्थ 'X' का नाम व सूत्र (ii) जल के साथ अभिक्रिया लिखिए।", "a": "(i) पदार्थ 'X': कैल्सियम ऑक्साइड (बिना बुझा चूना), सूत्र: $CaO$<br>(ii) जल से क्रिया: $CaO(s) + H_2O(l) \\rightarrow Ca(OH)_2(aq) + \\text{ऊष्मा}$ (बुझा हुआ चूना)"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "जल के विद्युत अपघटन में एक परखनली में एकत्रित गैस की मात्रा दूसरी से दोगुनी क्यों है? उस गैस का नाम बताइए।", "a": "गैस का नाम: हाइड्रोजन ($H_2$)। जल ($2H_2O \\rightarrow 2H_2 + O_2$) में हाइड्रोजन और ऑक्सीजन का आयतन अनुपात $2:1$ होता है, इसलिए कैथोड पर हाइड्रोजन गैस ऑक्सीजन से दोगुनी एकत्रित होती है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "जब लोहे की कील को कॉपर सल्फेट के विलयन में डुबोया जाता है तो विलयन का रंग क्यों बदल जाता है?", "a": "लोहा ($Fe$), कॉपर ($Cu$) से अधिक क्रियाशील है। यह नीले कॉपर सल्फेट ($CuSO_4$) से कॉपर को विस्थापित कर हल्के हरे रंग का फेरस सल्फेट ($FeSO_4$) बना देता है:<br>$Fe(s) + CuSO_4(aq) \\rightarrow FeSO_4(aq) + Cu(s)$"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activity 1.5)", "isPYQ": false, "q": "फेरस सल्फेट क्रिस्टल को गर्म करने पर क्या प्रेक्षण प्राप्त होते हैं?", "a": "गर्म करने पर हरा रंग बदलकर श्वेत और फिर लाल-भूरा ($Fe_2O_3$) हो जाता है तथा तीक्ष्ण गंध वाली $SO_2$ व $SO_3$ गैसें निकलती हैं:<br>$2FeSO_4(s) \\xrightarrow{\\Delta} Fe_2O_3(s) + SO_2(g) + SO_3(g)$"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activity 1.8)", "isPYQ": false, "q": "सूर्य के प्रकाश में सिल्वर क्लोराइड का रंग धूसर (grey) क्यों हो जाता है? इसका उपयोग किसमें होता है?", "a": "श्वेत सिल्वर क्लोराइड सूर्य के प्रकाश में वियोजित होकर सिल्वर (धूसर रंग) व क्लोरीन बनाता है: $2AgCl(s) \\rightarrow 2Ag(s) + Cl_2(g)$। इसका उपयोग श्याम-श्वेत (Black & White) फ़ोटोग्राफ़ी में होता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "संतुलित रासायनिक समीकरण क्या है? रासायनिक समीकरण को संतुलित करना क्यों आवश्यक है?", "a": "जिस समीकरण में तीर के दोनों ओर प्रत्येक तत्व के परमाणुओं की संख्या समान हो, उसे संतुलित समीकरण कहते हैं। द्रव्यमान संरक्षण के नियम (द्रव्यमान का न सृजन होता है न विनाश) का पालन करने हेतु इसे संतुलित करना आवश्यक है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "ऊष्माक्षेपी एवं ऊष्माशोषी अभिक्रिया का क्या अर्थ है? उदाहरण दीजिए।", "a": "• ऊष्माक्षेपी: उत्पाद के साथ ऊष्मा भी उत्पन्न होती है (उदा. $CH_4 + 2O_2 \\rightarrow CO_2 + 2H_2O + \\text{ऊष्मा}$)।<br>• ऊष्माशोषी: अभिकारकों को तोड़ने में ऊष्मा अवशोषित होती है (उदा. $CaCO_3 + \\text{ऊष्मा} \\rightarrow CaO + CO_2$)।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "श्वसन को ऊष्माक्षेपी अभिक्रिया क्यों कहते हैं?", "a": "कोशिकाओं में ग्लूकोज ऑक्सीजन से मिलकर ऑक्सीकृत होता है और ऊर्जा मुक्त करता है:<br>$C_6H_{12}O_6 + 6O_2 \\rightarrow 6CO_2 + 6H_2O + \\text{ऊर्जा}$"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "विस्थापन एवं द्विविस्थापन अभिक्रियाओं में क्या अंतर है?", "a": "• विस्थापन: अधिक क्रियाशील तत्व कम क्रियाशील तत्व को उसके लवण से हटाता है ($Zn + CuSO_4 \\rightarrow ZnSO_4 + Cu$)।<br>• द्विविस्थापन: अभिकारकों के बीच आयनों का आदान-प्रदान होता है ($Na_2SO_4 + BaCl_2 \\rightarrow BaSO_4\\downarrow + 2NaCl$)।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "संक्षारण व विकृतगंधिता को समझाइए तथा वसायुक्त खाद्य पदार्थों में नाइट्रोजन क्यों भरते हैं?", "a": "• संक्षारण: वायु व नमी से धातु का धीरे-धीरे नष्ट होना (लोहे पर जंग)।<br>• विकृतगंधिता: वसा/तेल के उपचयन से स्वाद व गंध खराब होना। चिप्स की थैली में अक्रिय नाइट्रोजन गैस भरकर उपचयन रोका जाता है।"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "बिना बुझा हुआ चूना का रासायनिक सूत्र लिखिए।", "a": "$CaO$ (कैल्सियम ऑक्साइड)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "संतुलित समीकरण $Fe + H_2O \\rightarrow Fe_3O_4 + H_2$ में $Fe$ का गुणांक क्या है?", "a": "संतुलित समीकरण: $3Fe + 4H_2O \\rightarrow Fe_3O_4 + 4H_2$। अतः $Fe$ का गुणांक $3$ है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "लेड नाइट्रेट के तापन से उत्सर्जित भूरी गैस का नाम व रासायनिक समीकरण लिखिए।", "a": "उत्सर्जित भूरी गैस: नाइट्रोजन डाइऑक्साइड ($NO_2$)।<br>समीकरण: $2Pb(NO_3)_2 \\xrightarrow{\\Delta} 2PbO + 4NO_2 + O_2$"}, {"cat": "🏆 RBSE Board Exam 2026 (3 अंक)", "isPYQ": true, "q": "रासायनिक अभिक्रिया $Pb + CuCl_2 \\rightarrow [X] + Cu$ में उत्पाद $[X]$ को पहचानिए तथा वियोजन अभिक्रिया को संयोजन अभिक्रिया के विपरीत क्यों कहा जाता है?", "a": "• $[X] = PbCl_2$ (लेड क्लोराइड)।<br>• संयोजन में दो पदार्थ जुड़कर एकल उत्पाद बनाते हैं, जबकि वियोजन में एकल अभिकारक टूटकर दो या अधिक उत्पाद बनाता है, इसलिए यह संयोजन के विपरीत है।"}, {"cat": "🏆 RBSE Board Exam 2024 (4 अंक)", "isPYQ": true, "q": "अपचयन की परिभाषा लिखिए तथा कॉपर चूर्ण के उपचयन को समीकरण सहित समझाइए।", "a": "• अपचयन: किसी पदार्थ से ऑक्सीजन का ह्रास या हाइड्रोजन का योग होना अपचयन कहलाता है।<br>• चाइना डिश में कॉपर चूर्ण को गर्म करने पर उस पर काले रंग की कॉपर (II) ऑक्साइड की परत चढ़ जाती है: $2Cu + O_2 \\xrightarrow{\\Delta} 2CuO$"}], "2": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "आपको तीन परखनलियाँ दी गई हैं (आसवित जल, अम्लीय व क्षारीय विलयन)। केवल लाल लिटमस पत्र से पहचान कैसे करेंगे?", "a": "1. लाल लिटमस जिस परखनली में नीला हो जाए, वह क्षारीय विलयन है।<br>2. इस नीले हो चुके लिटमस को शेष दो में डालने पर जिसमें यह पुनः लाल हो जाए, वह अम्लीय है।<br>3. जिसमें कोई रंग परिवर्तन न हो, वह आसवित जल (उदासीन) है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पीतल एवं ताँबे के बर्तनों में दही एवं खट्टे पदार्थ क्यों नहीं रखने चाहिए?", "a": "दही व खट्टे पदार्थों में अम्ल (जैसे लैक्टिक अम्ल) होते हैं, जो पीतल व ताँबे से क्रिया करके विषैले लवण बनाते हैं जिनसे भोजन विषाक्त हो जाता है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "अम्ल का जलीय विलयन क्यों विद्युत का चालन करता है, जबकि ग्लूकोज़ व एल्कोहल नहीं करते?", "a": "अम्ल जल में घुलकर मुक्त हाइड्रोजन आयन ($H^+ / H_3O^+$) बनाते हैं जो विद्युत धारा का चालन करते हैं। ग्लूकोज़ और एल्कोहल आयनीकृत होकर $H^+$ आयन नहीं देते।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "शुष्क हाइड्रोक्लोरिक गैस शुष्क लिटमस पत्र के रंग को क्यों नहीं बदलती है?", "a": "जल की अनुपस्थिति में शुष्क $HCl$ गैस से $H^+$ आयन पृथक नहीं हो पाते। मुक्त $H^+$ आयन न बनने से लिटमस का रंग नहीं बदलता।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "अम्ल को तनुकृत करते समय अम्ल को जल में मिलाना चाहिए, न कि जल को अम्ल में। क्यों?", "a": "सांद्र अम्ल में जल मिलाना अत्यंत ऊष्माक्षेपी है। यदि अम्ल में जल डालें तो अचानक उत्पन्न तीव्र ऊष्मा से मिश्रण बाहर उछलकर त्वचा जला सकता है और काँच का पात्र टूट सकता है।"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activity 2.5)", "isPYQ": false, "q": "चूने के पानी में $CO_2$ प्रवाहित करने पर क्या होता है? अत्यधिक गैस प्रवाहित करने पर क्या परिवर्तन आता है?", "a": "• कम मात्रा में: अघुलनशील कैल्सियम कार्बोनेट ($CaCO_3$) बनने से पानी दूधिया हो जाता है।<br>• अधिक मात्रा में: जल में विलयशील कैल्सियम हाइड्रोजनकार्बोनेट $[Ca(HCO_3)_2]$ बनने से दूधियापन गायब हो जाता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "ताज़े दूध का pH 6 होता है। दही बनने पर pH में क्या परिवर्तन होगा? ग्वाला ताज़े दूध में थोड़ा बेकिंग सोडा क्यों मिलाता है?", "a": "दही बनने पर लैक्टिक अम्ल के कारण pH 6 से कम हो जाता है। ग्वाला बेकिंग सोडा मिलाकर दूध को हल्का क्षारीय कर देता है ताकि दूध जल्दी खट्टा न हो।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "प्लास्टर ऑफ पेरिस को आर्द्र-रोधी बर्तन में क्यों रखा जाना चाहिए?", "a": "POP ($CaSO_4 \\cdot \\frac{1}{2}H_2O$) नमी के संपर्क में आकर जल अवशोषित कर कठोर जिप्सम ($CaSO_4 \\cdot 2H_2O$) में बदल जाता है और जमने का गुण खो देता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "धोने का सोडा एवं बेकिंग सोडा के दो-दो प्रमुख उपयोग लिखिए।", "a": "• धोने का सोडा ($Na_2CO_3 \\cdot 10H_2O$): (i) काँच, साबुन व कागज़ उद्योग में (ii) जल की स्थायी कठोरता हटाने में।<br>• बेकिंग सोडा ($NaHCO_3$): (i) बेकिंग पाउडर बनाने में (ii) पेट की अम्लता दूर करने (ऐन्टैसिड) में।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "दही (खट्टे दूध) में उपस्थित अम्ल का नाम लिखिए।", "a": "लैक्टिक अम्ल (Lactic Acid)।"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "नेटल (Nettle) के डंक में उपस्थित अम्ल का नाम लिखिए।", "a": "मेथेनॉइक अम्ल (फॉर्मिक अम्ल)।"}, {"cat": "🏆 RBSE Board Exam 2025 (3 अंक)", "isPYQ": true, "q": "क्लोर-क्षार प्रक्रिया किसे कहते हैं? रासायनिक समीकरण लिखिए।", "a": "सोडियम क्लोराइड के जलीय विलयन (लवण जल) में विद्युत प्रवाहित करने पर यह वियोजित होकर सोडियम हाइड्रोक्साइड ($NaOH$), क्लोरीन ($Cl_2$) व हाइड्रोजन ($H_2$) बनाता है:<br>$2NaCl(aq) + 2H_2O(l) \\rightarrow 2NaOH(aq) + Cl_2(g) + H_2(g)$"}, {"cat": "🏆 RBSE Board Exam 2024 (3 अंक)", "isPYQ": true, "q": "प्लास्टर ऑफ पेरिस (POP) का रासायनिक सूत्र तथा इसकी जल के साथ अभिक्रिया का समीकरण लिखिए।", "a": "• सूत्र: $CaSO_4 \\cdot \\frac{1}{2}H_2O$ (कैल्सियम सल्फेट अर्धहाइड्रेट)<br>• जल से अभिक्रिया: $CaSO_4 \\cdot \\frac{1}{2}H_2O + 1\\frac{1}{2}H_2O \\rightarrow CaSO_4 \\cdot 2H_2O$ (जिप्सम)"}, {"cat": "🏆 RBSE Board Exam 2026 (4 अंक)", "isPYQ": true, "q": "क्रिस्टलन का जल किसे कहते हैं? नीले थोथे एवं धोने के सोडे के सूत्र लिखकर उनमें क्रिस्टलन के जल के अणुओं की संख्या बताइए।", "a": "लवण के एक सूत्र इकाई में जल के निश्चित अणुओं की संख्या को क्रिस्टलन का जल कहते हैं।<br>• नीला थोथा ($CuSO_4 \\cdot 5H_2O$): 5 अणु जल<br>• धोने का सोडा ($Na_2CO_3 \\cdot 10H_2O$): 10 अणु जल"}], "3": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "आघातवर्ध्य तथा तन्य का अर्थ बताइए। सोडियम को किरोसिन में डुबोकर क्यों रखा जाता है?", "a": "• आघातवर्ध्यता: धातुओं को पीटकर पतली चादर बनाना (सोना, चाँदी)।<br>• तन्यता: धातु से पतले तार खींचना (सोना)।<br>• सोडियम हवा व नमी से तुरंत क्रिया कर आग पकड़ लेता है, इसलिए इसे किरोसिन तेल में डुबोकर रखते हैं।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "आयनिक यौगिकों का गलनांक उच्च क्यों होता है?", "a": "आयनिक यौगिकों में विपरीत आवेशित धनायनों एवं ऋणायनों के मध्य अत्यंत मजबूत स्थिर विद्युत आकर्षण बल होता है, जिसे तोड़ने के लिए बहुत अधिक ऊष्मा चाहिए।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "खाद्य पदार्थ के डिब्बों पर जिंक की बजाय टिन का लेप क्यों होता है? तथा गर्म जल का टैंक बनाने में ताँबे का उपयोग क्यों होता है?", "a": "• टिन की अपेक्षा जिंक अधिक अभिक्रियाशील है और खाद्य अम्लों से क्रिया कर सकता है।<br>• ताँबा गर्म जल या भाप से क्रिया नहीं करता, जबकि लोहा भाप से क्रिया कर जंग खा जाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "सबसे अधिक तन्य धातु का नाम लिखिए।", "a": "सोना (Gold - $Au$)।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "कमरे के ताप पर द्रव अवस्था में पाई जाने वाली अधातु तथा मिश्रधातु पीतल के घटक लिखिए।", "a": "• द्रव अधातु: ब्रोमीन ($Br$)<br>• पीतल (Brass) के घटक: ताँबा ($Cu$) एवं जस्ता ($Zn$)"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "धातुओं $Mg, Zn$ तथा $Fe$ को उनकी अभिक्रियाशीलता के घटते क्रम में व्यवस्थित कीजिए।", "a": "$Mg > Zn > Fe$ (मैग्नीशियम > जिंक > आयरन)।"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "उभयधर्मी ऑक्साइड (Amphoteric Oxides) किसे कहते हैं? दो उदाहरण दीजिए।", "a": "ऐसे धातु ऑक्साइड जो अम्ल तथा क्षारक दोनों से अभिक्रिया करके लवण एवं जल बनाते हैं, उभयधर्मी ऑक्साइड कहलाते हैं। उदाहरण: ऐलुमिनियम ऑक्साइड ($Al_2O_3$) तथा जिंक ऑक्साइड ($ZnO$)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "थर्मिट अभिक्रिया क्या है? इसका रासायनिक समीकरण व उपयोग लिखिए।", "a": "आयरन (III) ऑक्साइड ($Fe_2O_3$) के साथ ऐलुमिनियम की अत्यधिक ऊष्माक्षेपी अभिक्रिया जिससे गलित लोहा प्राप्त होता है:<br>$Fe_2O_3(s) + 2Al(s) \\rightarrow 2Fe(l) + Al_2O_3(s) + \\text{ऊष्मा}$<br>उपयोग: रेलवे पटरियों एवं मशीनी दरारों को जोड़ने में।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (3 अंक)", "isPYQ": true, "q": "भर्जन (Roasting) एवं निस्तापन (Calcination) में अंतर उदाहरण सहित स्पष्ट कीजिए।", "a": "• भर्जन: सल्फाइड अयस्क को वायु की उपस्थिति में अधिक ताप पर गर्म कर ऑक्साइड में बदलना ($2ZnS + 3O_2 \\xrightarrow{\\Delta} 2ZnO + 2SO_2$)।<br>• निस्तापन: कार्बोनेट अयस्क को सीमित वायु में गर्म कर ऑक्साइड में बदलना ($ZnCO_3 \\xrightarrow{\\Delta} ZnO + CO_2$)।"}], "4": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पेन्टेन ($C_5H_{12}$) के कितने संरचनात्मक समावयव होते हैं? तथा एथेनॉल से एथेनॉइक अम्ल में परिवर्तन को ऑक्सीकरण क्यों कहते हैं?", "a": "• पेन्टेन के 3 समावयव होते हैं: n-पेन्टेन, आइसोपेन्टेन और नियोपेन्टेन।<br>• क्षारीय $KMnO_4$ की उपस्थिति में एथेनॉल में ऑक्सीजन जुड़ता है ($CH_3CH_2OH + 2[O] \\rightarrow CH_3COOH + H_2O$), अतः यह ऑक्सीकरण है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "प्रयोग द्वारा आप एल्कोहल एवं कार्बोक्सिलिक अम्ल में कैसे अंतर कर सकते हैं?", "a": "सोडियम हाइड्रोजनकार्बोनेट ($NaHCO_3$) परीक्षण: कार्बोक्सिलिक अम्ल में $NaHCO_3$ मिलाने पर तीव्र बुदबुदाहट के साथ $CO_2$ गैस निकलती है, जबकि एल्कोहल कोई अभिक्रिया नहीं देता।"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activities)", "isPYQ": false, "q": "एस्टरीकरण (Esterification) एवं साबुनीकरण (Saponification) अभिक्रिया समीकरण सहित समझाइए।", "a": "• एस्टरीकरण: अम्ल की उपस्थिति में एथेनॉइक अम्ल व एथेनॉल मिलकर मीठी फलों जैसी गंध वाला एस्टर बनाते हैं ($CH_3COOH + C_2H_5OH \\rightarrow CH_3COOC_2H_5 + H_2O$)।<br>• साबुनीकरण: एस्टर की $NaOH$ से क्रिया द्वारा साबुन बनने की प्रक्रिया ($CH_3COOC_2H_5 + NaOH \\rightarrow C_2H_5OH + CH_3COONa$)।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "समजातीय श्रेणी (Homologous Series) क्या है?", "a": "समान प्रकार्यात्मक समूह वाले यौगिकों की ऐसी श्रेणी जिनमें दो क्रमागत सदस्यों के बीच $-CH_2-$ इकाई तथा $14\\text{ u}$ आणविक द्रव्यमान का अंतर होता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "एथेन ($C_2H_6$) के एक अणु में सहसंयोजक आबंधों की संख्या कितनी होती है?", "a": "7 सहसंयोजक आबंध।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "प्रोपेन ($C_3H_8$) में सहसंयोजक आबंधों की संख्या तथा कीटोन का प्रकार्यात्मक समूह लिखिए।", "a": "• प्रोपेन में आबंध = 10 सहसंयोजक आबंध<br>• कीटोन समूह = $>C=O$ (अनुलग्न: -ओन)"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "मेथेन ($CH_4$) में सहसंयोजक आबंधों की संख्या तथा यौगिक $CH_3-C\\equiv CH$ का नाम लिखिए।", "a": "• मेथेन में आबंध = 4 सहसंयोजक आबंध<br>• $CH_3-C\\equiv CH$ का नाम = प्रोपाइन (Propyne)"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "कार्बन के दो विशिष्ट गुणधर्म कौन-से हैं जिनके कारण कार्बन यौगिकों की विशाल संख्या पाई जाती है?", "a": "1. शृंखलन (Catenation): कार्बन परमाणुओं का आपस में जुड़कर लंबी शृंखला बनाने का गुण।<br>2. चतुःसंयोजकता (Tetravalency): कार्बन की संयोजकता 4 होना।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "संकलन (हाइड्रोजनीकरण) अभिक्रिया क्या है? इसका औद्योगिक अनुप्रयोग लिखिए।", "a": "निकैल ($Ni$) उत्प्रेरक की उपस्थिति में असंतृप्त हाइड्रोकार्बन (वनस्पति तेल) में हाइड्रोजन जोड़कर संतृप्त हाइड्रोकार्बन (वनस्पति घी) बनाने की क्रिया संकलन अभिक्रिया कहलाती है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (3 अंक)", "isPYQ": true, "q": "साबुन की मिसेल (Micelle) निर्माण तथा सफाई प्रक्रिया की क्रियाविधि समझाइए।", "a": "साबुन के अणु के दो सिरे होते हैं—जलरागी (आयनिक सिरा) जो जल में घुलता है तथा जलविरागी (हाइड्रोकार्बन पूँछ) जो तैलीय मैल से जुड़ता है। ये मैल के चारों ओर गोलाकार 'मिसेल' बनाते हैं जिससे मैल पानी के साथ बाहर निकल जाता है।"}, {"cat": "🏆 RBSE Board Exam 2026 (3 अंक)", "isPYQ": true, "q": "नाइट्रोजन अणु ($N_2$) में आबंध का प्रकार बताइए तथा कार्बन द्वारा $C^{4-}$ ऋणायन बनाना क्यों कठिन है?", "a": "• $N_2$ में प्रत्येक नाइट्रोजन परमाणु 3-3 इलेक्ट्रॉनों की साझेदारी कर त्रि-आबंध ($:N\\equiv N:$) बनाता है।<br>• कार्बन के नाभिक में केवल 6 प्रोटॉन होते हैं जिनके लिए 10 इलेक्ट्रॉनों ($C^{4-}$) को धारण करना अत्यंत कठिन होता है।"}], "5": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "स्वपोषी पोषण तथा विषमपोषी पोषण में क्या अंतर है? तथा आमाशय में अम्ल ($HCl$) की क्या भूमिका है?", "a": "• स्वपोषी: $CO_2$ व जल से सूर्य के प्रकाश व क्लोरोफिल द्वारा स्वयं भोजन बनाना (हरे पौधे)। विषमपोषी: दूसरों पर निर्भर रहना (जंतु)।<br>• $HCl$ की भूमिका: माध्यम को अम्लीय बनाकर पेप्सिन एंजाइम को सक्रिय करना तथा भोजन के जीवाणुओं को नष्ट करना।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पचे हुए भोजन को अवशोषित करने के लिए क्षुद्रांत्र को कैसे अभिकल्पित किया गया है?", "a": "क्षुद्रांत्र (छोटी आँत) की आंतरिक भित्ति पर लाखों अंगुलीनुमा प्रवर्ध 'दीर्घरोम' (Villi) होते हैं जो अवशोषण का पृष्ठीय क्षेत्रफल बढ़ा देते हैं और इनमें रुधिर वाहिकाओं का सघन जाल होता है।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "ग्लूकोज़ के ऑक्सीकरण से भिन्न जीवों में ऊर्जा प्राप्त करने के तीन पथ लिखिए।", "a": "कोशिकाद्रव्य में ग्लूकोज़ (6C) पायरुवेट (3C) में टूटता है, फिर:<br>1. ऑक्सीजन की अनुपस्थिति में (यीस्ट): इथेनॉल + $CO_2$ + ऊर्जा<br>2. ऑक्सीजन के अभाव में (पेशी कोशिका): लैक्टिक अम्ल + ऊर्जा<br>3. ऑक्सीजन की उपस्थिति में (माइटोकॉन्ड्रिया): $CO_2$ + जल + 38 ATP ऊर्जा"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "वायवीय तथा अवायवीय श्वसन में अंतर तथा दोहरा परिसंचरण का महत्व बताइए।", "a": "• वायवीय श्वसन $O_2$ की उपस्थिति में होता है और ग्लूकोज का पूर्ण विखंडन करता है; अवायवीय $O_2$ के बिना होता है।<br>• दोहरा परिसंचरण ऑक्सीजनित व विऑक्सीजनित रक्त को मिलने से रोकता है जिससे उच्च ऊर्जा मिलती है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "कृत्रिम वृक्क द्वारा नाइट्रोजनी अपशिष्ट उत्पादों को रुधिर से निकालने की युक्ति को क्या कहते हैं?", "a": "अपोहन (Dialysis)।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "अमीबा में भोजन का अंतर्ग्रहण किस अंगक द्वारा होता है तथा अग्न्याशय से स्रावित प्रोटीन पाचक एंजाइम का नाम लिखिए।", "a": "• अमीबा में अंतर्ग्रहण: पादाभ / कूटपाद (Pseudopodia)<br>• प्रोटीन पाचक एंजाइम: ट्रिप्सिन (Trypsin)"}, {"cat": "🏆 RBSE Board Exam 2026 (1 अंक)", "isPYQ": true, "q": "मनुष्य में वृक्क एक तंत्र का भाग है जो संबंधित है — तथा पायरुवेट के विखंडन से $CO_2$, जल तथा ऊर्जा किस कोशिकांग में बनती है?", "a": "• वृक्क संबंधित है: उत्सर्जन तंत्र से (नेफ्रॉन इकाई)<br>• पायरुवेट का पूर्ण विखंडन: माइटोकॉन्ड्रिया में"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "पादपों में जाइलम एवं फ्लोएम द्वारा पदार्थों के वहन में क्या अंतर है?", "a": "• जाइलम: जड़ों से जल एवं खनिज लवणों का ऊपर की ओर एकदिशीय वहन करता है।<br>• फ्लोएम: पत्तियों में निर्मित भोजन का पौधे के सभी भागों में दोनों दिशाओं में स्थानांतरण करता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (4 अंक)", "isPYQ": true, "q": "प्रकाश-संश्लेषण प्रक्रम के दौरान होने वाली तीन मुख्य घटनाएँ लिखिए तथा रंध्र के खुलने व बंद होने का नियंत्रण कौन करता है?", "a": "घटनाएँ: (i) क्लोरोफिल द्वारा प्रकाश ऊर्जा का अवशोषण (ii) प्रकाश ऊर्जा को रासायनिक ऊर्जा में बदलना तथा जल का $H_2$ व $O_2$ में अपघटन (iii) $CO_2$ का कार्बोहाइड्रेट में अपचयन।<br>रंध्रों का खुलना व बंद होना 'द्वार कोशिकाएँ' (Guard cells) नियंत्रित करती हैं।"}], "6": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "प्रतिवर्ती क्रिया तथा टहलने के बीच क्या अंतर है? तथा सिनेप्स (अंतर्ग्रथन) में क्या होता है?", "a": "• प्रतिवर्ती क्रिया अनैच्छिक, त्वरित और मेरुरज्जु द्वारा नियंत्रित होती है, जबकि टहलना मस्तिष्क द्वारा नियंत्रित ऐच्छिक क्रिया है।<br>• सिनेप्स पर विद्युत आवेग रसायनों (न्यूरोट्रांसमीटर) का विमोचन कराता है जो अगली तंत्रिका की द्रुमिका में नया आवेग शुरू करते हैं।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "छुई-मुई पादप की गति तथा प्रकाश की ओर प्ररोह की गति में क्या अंतर है?", "a": "छुई-मुई में गति स्पर्श के प्रति जल की मात्रा में परिवर्तन से (वृद्धि से मुक्त और अदिशिक) होती है, जबकि प्ररोह की प्रकाशानुवर्तन गति वृद्धि पर आश्रित और ऑक्सिन हार्मोन द्वारा दिशिक होती है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "एक तंत्रिका कोशिका (न्यूरॉन) के मुख्य भाग व कार्य तथा तंत्रिका एवं हार्मोन क्रियाविधि में अंतर लिखिए।", "a": "• द्रुमिका: सूचना ग्रहण करना; कोशिकाकाय: विद्युत आवेग बनाना; एक्सॉन: आवेग को अंतिम सिरे तक पहुँचाना।<br>• तंत्रिका तंत्र विद्युत आवेग द्वारा तीव्र कार्य करता है जबकि हार्मोन तंत्र रक्त में रसायनों द्वारा धीमा किंतु स्थायी कार्य करता है।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "कोशिका विभाजन को प्रेरित करने वाले पादप हार्मोन का नाम लिखिए।", "a": "साइटोकाइनिन (Cytokinin)।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "शरीर की संस्थिति, संतुलन तथा सीधी रेखा में चलने के लिए मस्तिष्क का कौन-सा भाग उत्तरदायी है?", "a": "अनुमस्तिष्क (Cerebellum - पश्चमस्तिष्क का भाग)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "रक्तदाब, लार आना तथा वमन (उल्टी) जैसी अनैच्छिक क्रियाओं का नियंत्रण मस्तिष्क के किस भाग द्वारा होता है?", "a": "पश्चमस्तिष्क में स्थित मेडुला (Medulla) द्वारा।"}, {"cat": "🏆 RBSE Board Exam 2026 (2 अंक)", "isPYQ": true, "q": "प्रतिवर्ती चाप कहाँ बनते हैं तथा किस हार्मोन को 'लड़ो या भागो' (आपातकालीन) हार्मोन कहते हैं?", "a": "• प्रतिवर्ती चाप मेरुरज्जु (Spinal Cord) में बनते हैं।<br>• आपातकालीन हार्मोन: एड्रीनालिन (अधिवृक्क ग्रंथि से स्रावित)।"}, {"cat": "🏆 RBSE Board Exam 2024 (3 अंक)", "isPYQ": true, "q": "नर में वृषण द्वारा स्रावित हार्मोन का नाम तथा उसके दो प्रमुख कार्य लिखिए।", "a": "हार्मोन: टेस्टोस्टेरोन (Testosterone)।<br>कार्य: (1) शुक्राणुओं के उत्पादन का नियंत्रण करना (2) लड़कों में यौवनारंभ के लक्षणों (दाढ़ी-मूँछ, भारी आवाज) का विकास करना।"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "पादपों में प्रकाशानुवर्तन किस प्रकार होता है तथा आयोडीन युक्त नमक के उपयोग की सलाह क्यों दी जाती है?", "a": "• प्रकाश पड़ने पर ऑक्सिन हार्मोन प्ररोह के छाया वाले भाग में विसरित होकर कोशिकाओं की लंबाई बढ़ाता है जिससे तना प्रकाश की ओर मुड़ जाता है।<br>• थायरॉइड ग्रंथि में थायरॉक्सिन हार्मोन बनने के लिए आयोडीन आवश्यक है; इसकी कमी से गॉयटर (घेंघा) रोग हो जाता है।"}], "7": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "डी.एन.ए. प्रतिकृति का प्रजनन में क्या महत्त्व है? तथा द्विखंडन व बहुखंडन में अंतर बताइए।", "a": "• DNA प्रतिकृति से जनक के लक्षण संतति में जाते हैं और सूक्ष्म त्रुटियों से जीवन रक्षक विभिन्नताएँ आती हैं।<br>• द्विखंडन में एक कोशिका दो में बँटती है (अमीबा, लेश्मानिया), जबकि बहुखंडन में एक साथ अनेक कोशिकाओं में बँटती है (प्लैज़्मोडियम)।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "कुछ पौधों को उगाने के लिए कायिक प्रवर्धन का उपयोग क्यों किया जाता है?", "a": "1. बीज की तुलना में कम समय में फूल व फल लगते हैं।<br>2. बीज न बनाने वाले पौधों (केला, गुलाब, गन्ना) को आसानी से उगाया जा सकता है।<br>3. संतति आनुवंशिक रूप से जनक के समान होती है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "परागण व निषेचन में अंतर तथा ऋतुस्राव क्यों होता है?", "a": "• परागकणों का वर्तिकाग्र तक पहुँचना परागण है, जबकि नर व मादा युग्मक का संलयन निषेचन है।<br>• यदि अंड का निषेचन नहीं होता, तो गर्भाशय की मोटी स्पंजी परत रक्त एवं श्लेष्मा के रूप में बाहर निकलती है, जिसे ऋतुस्राव कहते हैं।"}, {"cat": "🏆 RBSE Board Exam 2024 (1 अंक)", "isPYQ": true, "q": "पुनरुद्भवन (Regeneration) की क्षमता रखने वाले एक जीव का नाम लिखिए।", "a": "प्लेनेरिया (या हाइड्रा)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "उभयलिंगी पुष्प के दो उदाहरण लिखिए तथा किस पौधे की पत्तियों की कोर पर कलिकाएँ निकलती हैं?", "a": "• उभयलिंगी पुष्प: सरसों एवं गुड़हल<br>• पत्तियों द्वारा कायिक प्रवर्धन: ब्रायोफ़िलम (पत्थरचट्टा)"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "जीवाणु जनित एवं वायरस जनित दो-दो यौन संचारित रोगों (STDs) के नाम लिखिए।", "a": "• जीवाणु जनित रोग: गोनेरिया तथा सिफलिस<br>• वायरस जनित रोग: लैंगिक मस्सा (Warts) तथा HIV-AIDS"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "माँ के शरीर में गर्भस्थ भ्रूण को पोषण किस प्रकार प्राप्त होता है?", "a": "भ्रूण को माँ के रुधिर से पोषण 'प्लैसेंटा' (अपरा) नामक तश्तरीनुमा विशेष संरचना से मिलता है, जिसके प्रवर्ध माँ के रक्त से ग्लूकोज़ व ऑक्सीजन भ्रूण को पहुँचाते हैं।"}, {"cat": "🏆 RBSE Board Exam 2026 (3 अंक)", "isPYQ": true, "q": "मादा जनन तंत्र के किन्हीं दो अंगों के कार्य तथा गर्भनिरोधन की तीन विधियाँ लिखिए।", "a": "• अंडाशय: मादा युग्मक (अंड) व एस्ट्रोजन का निर्माण; अंडवाहिका: निषेचन का स्थान।<br>• गर्भनिरोधन विधियाँ: (1) यांत्रिक अवरोध (कंडोम, कॉपर-टी) (2) हार्मोनल गोलियाँ (3) शल्यक्रिया (नसबंदी / ट्यूबेक्टोमी)।"}], "8": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "मेंडल के प्रयोगों द्वारा कैसे पता चला कि लक्षण प्रभावी अथवा अप्रभावी होते हैं?", "a": "शुद्ध लंबे ($TT$) व शुद्ध बौने ($tt$) मटर के संकरण से $F_1$ पीढ़ी में सभी पौधे लंबे ($Tt$) मिले (प्रभावी लक्षण)। परंतु $F_1$ के स्वनिषेचन से $F_2$ पीढ़ी में $25\\%$ पौधे बौने ($tt$) मिले, जो $F_1$ में छिपे रहने के कारण अप्रभावी कहलाए।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "संतति में नर एवं मादा जनकों द्वारा आनुवंशिक योगदान में बराबर की भागीदारी कैसे सुनिश्चित होती है?", "a": "अर्धसूत्री विभाजन द्वारा नर व मादा युग्मकों में गुणसूत्रों की संख्या आधी (23-23) रह जाती है। निषेचन के समय दोनों के मिलने से युग्मनज में पुनः 46 (23 जोड़े) गुणसूत्र स्थापित हो जाते हैं।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "वंशागति के नियमों का प्रतिपादन किसने किया तथा उनके द्विसंकर संकरण में $F_2$ पीढ़ी का लक्षण अनुपात क्या था?", "a": "• प्रतिपादक: ग्रेगर जॉन मेंडल<br>• द्विसंकर $F_2$ लक्षण अनुपात = $9:3:3:1$"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "मेंडल के एकसंकर संकरण प्रयोग में $F_2$ पीढ़ी का लक्षण प्ररूप (दृश्य) अनुपात तथा जीन प्ररूप अनुपात लिखिए।", "a": "• दृश्य अनुपात (लंबे : बौने) = $3 : 1$ (बौने पौधे = $25\\%$)<br>• जीन प्ररूप अनुपात ($TT : Tt : tt$) = $1 : 2 : 1$"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (3 अंक)", "isPYQ": true, "q": "मानव में बच्चे का लिंग निर्धारण कैसे होता है? आरेख या गुणसूत्रों के आधार पर समझाइए।", "a": "मानव में 23 जोड़े गुणसूत्र होते हैं। स्त्री में लिंग गुणसूत्र $XX$ तथा पुरुष में $XY$ होते हैं। सभी बच्चे माता से सदैव $X$ गुणसूत्र प्राप्त करते हैं। यदि पिता से $X$ गुणसूत्र मिले तो लड़की ($XX$) और यदि पिता से $Y$ गुणसूत्र मिले तो लड़का ($XY$) होगा। अतः लिंग निर्धारण पिता के गुणसूत्र पर निर्भर करता है।"}], "9": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "अवतल दर्पण के मुख्य फोकस की परिभाषा लिखिए तथा समतल दर्पण द्वारा बने प्रतिबिंब का आवर्धन +1 होने का क्या अर्थ है?", "a": "• मुख्य अक्ष के समांतर आने वाली किरणें परावर्तन के बाद जिस बिंदु पर मिलती हैं, उसे अवतल दर्पण का मुख्य फोकस ($F$) कहते हैं।<br>• आवर्धन $+1$ में '+' चिन्ह आभासी व सीधा प्रतिबिंब तथा '1' बिंब के बराबर साइज़ दर्शाता है।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "कार के अग्र-दीप (Headlight) एवं सौर भट्टी में कौन-सा दर्पण प्रयुक्त होता है और क्यों?", "a": "दोनों में अवतल दर्पण प्रयुक्त होता है। अग्र-दीप में बल्ब फोकस पर रखने से शक्तिशाली समांतर किरण पुंज मिलता है और सौर भट्टी में सूर्य की किरणें फोकस पर केंद्रित होकर उच्च ताप उत्पन्न करती हैं।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "'हीरे का अपवर्तनांक 2.42 है' इस कथन का क्या अभिप्राय है तथा लेंस की क्षमता का SI मात्रक लिखिए।", "a": "• इसका अर्थ है कि निर्वात में प्रकाश की चाल तथा हीरे में प्रकाश की चाल का अनुपात $2.42$ है।<br>• लेंस की क्षमता का SI मात्रक = डाइऑप्टर ($D$)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "हम वाहनों में उत्तल दर्पण को पश्च-दृश्य (Rear-view) दर्पण के रूप में वरीयता क्यों देते हैं?", "a": "क्योंकि उत्तल दर्पण सदैव सीधा तथा छोटा प्रतिबिंब बनाता है और बाहर की ओर वक्रित होने के कारण इसका दृष्टि-क्षेत्र (Field of view) बहुत विस्तृत होता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "प्रकाश के अपवर्तन का स्नेल का नियम लिखिए तथा $+4.0\\text{ D}$ क्षमता वाले लेंस की फोकस दूरी व प्रकृति बताइए।", "a": "• स्नेल का नियम: आपतन कोण की ज्या तथा अपवर्तन कोण की ज्या का अनुपात स्थिर होता है ($\\mu = \\frac{\\sin i}{\\sin r}$)।<br>• फोकस दूरी $f = \\frac{1}{+4.0} = +0.25\\text{ m} = +25\\text{ cm}$ (धनात्मक चिन्ह = उत्तल लेंस)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (3 अंक)", "isPYQ": true, "q": "गोलीय दर्पण सूत्र व लेंस सूत्र लिखिए तथा $16\\text{ cm}$ फोकस दूरी के अवतल दर्पण के सामने $24\\text{ cm}$ पर रखे बिंब के प्रतिबिंब की दूरी ($v$) ज्ञात कीजिए।", "a": "• दर्पण सूत्र: $\\frac{1}{v} + \\frac{1}{u} = \\frac{1}{f}$; लेंस सूत्र: $\\frac{1}{v} - \\frac{1}{u} = \\frac{1}{f}$<br>• गणना ($f=-16\\text{ cm}, u=-24\\text{ cm}$): $\\frac{1}{v} = \\frac{1}{-16} - \\frac{1}{-24} = \\frac{-3+2}{48} = -\\frac{1}{48} \\implies v = -48\\text{ cm}$ (वास्तविक व उल्टा)।"}], "10": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "नेत्र की समंजन क्षमता से क्या अभिप्राय है? सामान्य नेत्र का निकट बिंदु व दूर बिंदु लिखिए।", "a": "पक्ष्माभी पेशियों द्वारा अभिनेत्र लेंस की फोकस दूरी को समायोजित करने की क्षमता समंजन क्षमता कहलाती है। निकट बिंदु = $25\\text{ cm}$ तथा दूर बिंदु = अनंत ($\\infty$)।"}, {"cat": "🧪 क्रियाकलाप प्रश्न (Activities)", "isPYQ": false, "q": "प्रिज्म द्वारा श्वेत प्रकाश के विक्षेपण में रंगों का क्रम क्या होता है तथा इंद्रधनुष बनने में कौन-सी तीन घटनाएँ शामिल हैं?", "a": "• बैंगनी रंग सर्वाधिक झुकता है और लाल सबसे कम (VIBGYOR)।<br>• इंद्रधनुष की 3 घटनाएँ: जल की बूँद में (1) अपवर्तन व विक्षेपण (2) आंतरिक परावर्तन (3) बाहर निकलते समय पुनः अपवर्तन।"}, {"cat": "🏆 RBSE Board Exam 2025 (1 अंक)", "isPYQ": true, "q": "नेत्र में प्रवेश करने वाले प्रकाश की मात्रा को कौन नियंत्रित करता है तथा अंतरिक्ष यात्री को आकाश काला क्यों प्रतीत होता है?", "a": "• प्रकाश की मात्रा का नियंत्रण पुतली (Pupil) तथा परितारिका करती है।<br>• अंतरिक्ष में वायुमंडल न होने से प्रकाश का प्रकीर्णन नहीं होता, इसलिए आकाश काला दिखता है।"}, {"cat": "🏆 RBSE Board Exam 2026 (2 अंक)", "isPYQ": true, "q": "अग्रिम सूर्योदय तथा विलंबित सूर्यास्त का कारण क्या है तथा खतरे के संकेत का प्रकाश लाल रंग का क्यों होता है?", "a": "• कारण: वायुमंडलीय अपवर्तन (सूर्य वास्तविक सूर्योदय से 2 मिनट पूर्व दिखता है)।<br>• लाल रंग की तरंगदैर्ध्य सर्वाधिक होने से कोहरे या धुएँ में इसका प्रकीर्णन सबसे कम होता है और यह दूर से भी साफ़ दिखाई देता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "तारे क्यों टिमटिमाते हैं जबकि ग्रह नहीं टिमटिमाते?", "a": "तारे बहुत दूर होने से बिंदु-स्रोत हैं और वायुमंडलीय अपवर्तन के कारण उनकी आभासी स्थिति बदलती रहती है। ग्रह पृथ्वी के बहुत निकट होने से प्रकाश के विस्तृत स्रोत माने जाते हैं, जिससे टिमटिमाने का कुल औसत प्रभाव शून्य हो जाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (3 अंक)", "isPYQ": true, "q": "निकट-दृष्टि दोष (मायोपिया) एवं दीर्घ-दृष्टि दोष (हाइपरमेट्रोपिया) के कारण तथा निवारण हेतु प्रयुक्त लेंस लिखिए।", "a": "• निकट-दृष्टि दोष: प्रतिबिंब रेटिना के आगे बनता है (कारण: नेत्र गोलक का लंबा होना)। निवारण: अवतल लेंस।<br>• दीर्घ-दृष्टि दोष: प्रतिबिंब रेटिना के पीछे बनता है (कारण: गोलक का छोटा होना)। निवारण: उत्तल लेंस।"}], "11": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "1 ऐम्पियर व 1 वोल्ट की परिभाषा लिखिए।", "a": "• $1\\text{ A}$: यदि किसी चालक से 1 सेकंड में 1 कूलॉम आवेश प्रवाहित हो ($1\\text{ A} = 1\\text{ C}/1\\text{ s}$)।<br>• $1\\text{ V}$: 1 कूलॉम आवेश को एक बिंदु से दूसरे बिंदु तक ले जाने में यदि 1 जूल कार्य हो ($1\\text{ V} = 1\\text{ J}/1\\text{ C}$)।"}, {"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "विद्युत टोस्टर व इस्तरी के तापन अवयव शुद्ध धातु के न बनाकर मिश्रधातु के क्यों बनाए जाते हैं?", "a": "मिश्रधातुओं (जैसे नाइक्रोम) की प्रतिरोधकता शुद्ध धातु से बहुत अधिक होती है तथा उच्च ताप पर भी इनका शीघ्र ऑक्सीकरण (दहन) नहीं होता।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "घरेलू विद्युत परिपथों में उपकरणों को पार्श्वक्रम (समानांतर क्रम) में क्यों जोड़ा जाता है?", "a": "1. सभी उपकरणों को समान वोल्टेज ($220\\text{ V}$) मिलता है।<br>2. एक उपकरण बंद/खराब होने पर बाकी चलते रहते हैं।<br>3. परिपथ का कुल तुल्य प्रतिरोध कम हो जाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "विद्युत प्रतिरोधकता का SI मात्रक तथा $1\\text{ kWh}$ (1 यूनिट) में जूल की संख्या लिखिए।", "a": "• प्रतिरोधकता का मात्रक = ओम-मीटर ($\\Omega\\cdot\\text{m}$)<br>• $1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "ओम का नियम लिखिए तथा किसी चालक का प्रतिरोध किन चार कारकों पर निर्भर करता है?", "a": "• ओम का नियम: नियत ताप पर चालक के सिरों का विभवांतर उसमें प्रवाहित धारा के समानुपाती होता है ($V = IR$)।<br>• कारक: (1) चालक की लंबाई ($R \\propto l$) (2) अनुप्रस्थ काट क्षेत्रफल ($R \\propto 1/A$) (3) पदार्थ की प्रकृति (4) तापमान।"}, {"cat": "🏆 RBSE Board Exam 2024 (2 अंक)", "isPYQ": true, "q": "जूल का तापन नियम लिखिए तथा $10\\ \\Omega$ प्रतिरोध से $3\\text{ A}$ की धारा $2\\text{ s}$ तक प्रवाहित करने पर उत्पन्न ऊष्मा ज्ञात कीजिए।", "a": "सूत्र: $H = I^2Rt$<br>गणना: $H = (3)^2 \\times 10 \\times 2 = 9 \\times 20 = 180\\text{ J}$ (जूल)।"}, {"cat": "🏆 RBSE Board Exam 2025 & 2026 (3 अंक)", "isPYQ": true, "q": "$800\\text{ W}$ अनुमतांक का एक रेफ्रिजरेटर 4 घंटे/दिन चलाया जाता है। ₹2 प्रति kWh की दर से 30 दिन चलाने का विद्युत खर्च ज्ञात कीजिए।", "a": "कुल उपभुक्त ऊर्जा = $\\frac{800\\text{ W} \\times 4\\text{ h} \\times 30}{1000} = 96\\text{ kWh}$ (यूनिट)।<br>30 दिन का कुल खर्च = $96 \\times 2 = ₹192$।"}], "12": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "चुंबकीय क्षेत्र रेखाओं के गुण लिखिए तथा भूसंपर्क तार (Earth wire) का क्या कार्य है?", "a": "• गुण: ये चुंबक के बाहर N से S तथा भीतर S से N की ओर बंद वक्र बनाती हैं।<br>• भूसंपर्क तार (हरा आवरण) धातु के आवरण वाले साधित्रों में विद्युत क्षरण होने पर उपयोगकर्ता को तीव्र विद्युत आघात से बचाता है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (1 अंक)", "isPYQ": true, "q": "दक्षिण-हस्त अंगुष्ठ नियम में अँगूठा किसकी दिशा को दर्शाता है?", "a": "चालक में प्रवाहित विद्युत धारा की दिशा को।"}, {"cat": "🏆 RBSE Board Exam 2025 & 2026 (1 अंक)", "isPYQ": true, "q": "किसी छड़ चुंबक के भीतर चुंबकीय क्षेत्र रेखाओं की दिशा क्या होती है?", "a": "दक्षिणी ध्रुव (South Pole) से उत्तरी ध्रुव (North Pole) की ओर।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "दो चुंबकीय क्षेत्र रेखाएँ एक-दूसरे को प्रतिच्छेद क्यों नहीं करतीं?", "a": "यदि दो चुंबकीय क्षेत्र रेखाएँ एक-दूसरे को प्रतिच्छेद करेंगी, तो प्रतिच्छेदन बिंदु पर दिक्सूचक की सुई दो दिशाओं की ओर संकेत करेगी, जो कि असंभव है।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (2 अंक)", "isPYQ": true, "q": "परिनालिका (Solenoid) किसे कहते हैं? इसके भीतर चुंबकीय क्षेत्र कैसा होता है?", "a": "पास-पास लिपटे विद्युतरोधी ताँबे के तार की बेलनाकार अनेक फेरों वाली कुंडली को परिनालिका कहते हैं। इसके भीतर चुंबकीय क्षेत्र रेखाएँ समांतर सरल रेखाओं के रूप में अर्थात 'एकसमान' (Uniform) होती हैं।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (3 अंक)", "isPYQ": true, "q": "फ्लेमिंग का वामहस्त नियम लिखिए तथा घरेलू परिपथों में लघुपथन (Short circuit) व विद्युत फ्यूज का महत्व समझाइए।", "a": "• वामहस्त नियम: बाएँ हाथ की तर्जनी चुंबकीय क्षेत्र व मध्यमा विद्युत धारा की दिशा दर्शाए, तो अँगूठा चालक पर लगने वाले बल की दिशा दर्शाता है।<br>• जब विद्युन्मय (लाल) व उदासीन (काला) तार सीधे संपर्क में आते हैं तो लघुपथन होता है। फ्यूज कम गलनांक के कारण पिघलकर परिपथ तोड़ देता है और उपकरणों की रक्षा करता है।"}], "13": [{"cat": "📘 पाठ के आंतरिक प्रश्न (In-Text)", "isPYQ": false, "q": "पोषी स्तर क्या है? पारितंत्र में अपमार्जकों (Decomposers) की क्या भूमिका है?", "a": "• आहार शृंखला के प्रत्येक चरण को पोषी स्तर कहते हैं (घास $\\rightarrow$ टिड्डा $\\rightarrow$ मेंढक $\\rightarrow$ साँप)।<br>• अपमार्जक (जीवाणु व कवक) मृत कार्बनिक अवशेषों को सरल अकार्बनिक पदार्थों में बदलकर मिट्टी की उर्वरता बनाए रखते हैं और पर्यावरण साफ करते हैं।"}, {"cat": "📗 पाठ्यपुस्तक अभ्यास (Exercises)", "isPYQ": false, "q": "पारितंत्र में ऊर्जा का प्रवाह एकदिशिक क्यों होता है तथा 10% का नियम क्या है?", "a": "स्वपोषी द्वारा ग्रहण सौर ऊर्जा वापस सूर्य को नहीं जाती और प्रत्येक पोषी स्तर पर केवल $10\\%$ कार्बनिक ऊर्जा ही अगले स्तर के उपभोक्ता तक पहुँचती है (शेष $90\\%$ ऊष्मा में खर्च हो जाती है)।"}, {"cat": "🏆 RBSE Board Exam 2024 & 2025 (1 अंक)", "isPYQ": true, "q": "अनेक आहार शृंखलाओं के आपसी जाल को क्या कहते हैं तथा ओज़ोन परत को हानि पहुँचाने वाले मुख्य रसायन का नाम लिखिए।", "a": "• आहार जाल (Food Web)<br>• मुख्य रसायन: क्लोरोफ्लुओरो कार्बन (CFCs)"}, {"cat": "🏆 RBSE Board Exam 2024 & 2026 (2 अंक)", "isPYQ": true, "q": "जैविक आवर्धन (Biological Magnification) क्या है? समझाइए।", "a": "आहार शृंखला में अजैव-निम्नीकरणीय हानिकारक रसायनों (जैसे कीटनाशक DDT) का प्रवेश होकर प्रत्येक उच्च पोषी स्तर पर उनकी सांद्रता का क्रमिक रूप से बढ़ते जाना जैविक आवर्धन कहलाता है। मनुष्य शीर्षस्थ होने के कारण इससे सर्वाधिक प्रभावित होता है।"}, {"cat": "🏆 RBSE Board Exam 2025 (2 अंक)", "isPYQ": true, "q": "ओज़ोन परत क्या है तथा यह किस प्रकार अपक्षयित हो रही है?", "a": "ओज़ोन ($O_3$) समताप मंडल में स्थित परत है जो सूर्य से आने वाली हानिकारक पराबैंगनी (UV) किरणों से पृथ्वी की रक्षा करती है (त्वचा कैंसर से बचाती है)। रेफ्रिजरेटर व अग्निशमन में प्रयुक्त CFCs गैसों के कारण इसका क्षय हो रहा है।"}, {"cat": "🏆 RBSE Board Exam 2026 (2 अंक)", "isPYQ": true, "q": "अजैव-निम्नीकरणीय कचरा निपटान के दो उपाय लिखिए तथा डिस्पोजेबल प्लास्टिक/कुल्हड़ की तुलना में कागज़ के कप का उपयोग क्यों बेहतर है?", "a": "• उपाय: गीले व सूखे कचरे का पृथक्करण तथा 3R सिद्धांत (Reduce, Reuse, Recycle) अपनाना।<br>• कागज़ के कप जैव-निम्नीकरणीय एवं पुनर्चक्रण योग्य हैं तथा कुल्हड़ की तरह उर्वर मिट्टी की हानि नहीं करते।"}]};
+
+  let currentBranch = 'all';
+  let currentChapter = '1';
+  let currentQFilter = 'all'; // 'all' | 'pyq' | '2026' | '2025' | '2024' | 'intext' | 'exercise'
+  let selfTestMode = false;
+
+  const STORAGE_KEY_MASTERED = 'gyanu_sci10_qa_mastered_v1';
+  const STORAGE_KEY_DARK = 'gyanu_sci10_qa_dark_v1';
+  let masteredMap = {};
+  try {
+    masteredMap = JSON.parse(localStorage.getItem(STORAGE_KEY_MASTERED) || '{}');
+  } catch (e) { masteredMap = {}; }
+
+  function formatMathAndChem(str) {
+    if (!str) return '';
+    return str.replace(/\$([^$]+)\$/g, (_, math) => {
+      let cleaned = math
+        .replace(/\\text\{([^}]+)\}/g, '$1')
+        .replace(/\\frac\{([^}]+)\}\{([^}]+)\}/g, '($1/$2)')
+        .replace(/\\rightarrow/g, '→')
+        .replace(/\\xrightarrow\{[^}]*\}/g, '→')
+        .replace(/\\downarrow/g, '↓')
+        .replace(/\\times/g, '×')
+        .replace(/\\propto/g, '∝')
+        .replace(/\\Omega/g, 'Ω')
+        .replace(/\\mu/g, 'μ')
+        .replace(/\\angle/g, '∠')
+        .replace(/\\cdot/g, '·')
+        .replace(/\\circ/g, '°')
+        .replace(/\\infty/g, '∞')
+        .replace(/\\implies/g, '⇒')
+        .replace(/\\mathbf\{([^}]+)\}/g, '$1')
+        .replace(/\\dots/g, '...')
+        .replace(/\\_/g, '_')
+        .replace(/_\{([^}]+)\}/g, '<sub>$1</sub>')
+        .replace(/_([0-9a-zA-Z]+)/g, '<sub>$1</sub>')
+        .replace(/\^\{([^}]+)\}/g, '<sup>$1</sup>')
+        .replace(/\^([0-9a-zA-Z+-]+)/g, '<sup>$1</sup>')
+        .replace(/\\%/g, '%');
+      return `<span class="formula-pill">${cleaned}</span>`;
+    });
+  }
+
+  function cleanSpeechText(str) {
+    if (!str) return '';
+    return str.replace(/<[^>]+>/g, ' ').replace(/\$/g, '').replace(/\\[a-zA-Z]+/g, ' ');
+  }
+
+  function initQABank() {
+    if (localStorage.getItem(STORAGE_KEY_DARK) === 'true') {
+      document.body.classList.add('dark-mode');
+      document.getElementById('themeBtn').innerHTML = '☀️ लाइट मोड';
+    }
+    populateChapterDropdown();
+    updateGlobalStats();
+    updateChapterBanner();
+    renderQuestions();
+  }
+
+  function populateChapterDropdown() {
+    const sel = document.getElementById('chapterSelect');
+    const keys = Object.keys(chaptersMeta).sort((a, b) => parseInt(a) - parseInt(b));
+    const filteredKeys = keys.filter(k => currentBranch === 'all' || chaptersMeta[k].branch === currentBranch);
+
+    sel.innerHTML = filteredKeys.map(k => {
+      const m = chaptersMeta[k];
+      const qList = masterQAData[k] || [];
+      const pyqCount = qList.filter(x => x.isPYQ).length;
+      return `<option value="${k}">${m.title} (${qList.length} प्रश्न | 🏆 ${pyqCount} PYQs)</option>`;
+    }).join('');
+
+    if (!filteredKeys.includes(String(currentChapter))) {
+      currentChapter = filteredKeys[0] || '1';
+    }
+    sel.value = currentChapter;
+  }
+
+  function filterByBranch(branch, btnEl) {
+    currentBranch = branch;
+    document.querySelectorAll('.branch-tab').forEach(b => b.classList.remove('active'));
+    btnEl.classList.add('active');
+    populateChapterDropdown();
+    onChapterChange();
+  }
+
+  function onChapterChange() {
+    currentChapter = document.getElementById('chapterSelect').value;
+    const drawer = document.getElementById('pdfEmbedDrawer');
+    drawer.classList.remove('open');
+    document.getElementById('pdfToggleBtn').innerHTML = '👁️ यहीं PDF खोलें';
+    updateChapterBanner();
+    renderQuestions();
+  }
+
+  function updateChapterBanner() {
+    const m = chaptersMeta[currentChapter];
+    if (!m) return;
+    document.getElementById('bannerBranchTag').textContent = `${m.branchName} • अध्याय ${m.ch}`;
+    document.getElementById('bannerTitle').textContent = m.pdfTitle;
+    document.getElementById('bannerViewLink').href = m.viewUrl;
+    document.getElementById('bannerDlLink').href = m.downloadUrl;
+    const frame = document.getElementById('pdfFrame');
+    if (document.getElementById('pdfEmbedDrawer').classList.contains('open')) {
+      frame.src = m.previewUrl;
+    } else {
+      frame.src = '';
+    }
+  }
+
+  function togglePdfDrawer() {
+    const drawer = document.getElementById('pdfEmbedDrawer');
+    const btn = document.getElementById('pdfToggleBtn');
+    const frame = document.getElementById('pdfFrame');
+    const m = chaptersMeta[currentChapter];
+    drawer.classList.toggle('open');
+    if (drawer.classList.contains('open')) {
+      frame.src = m.previewUrl;
+      btn.innerHTML = '✖ PDF बंद करें';
+    } else {
+      frame.src = '';
+      btn.innerHTML = '👁️ यहीं PDF खोलें';
+    }
+  }
+
+  function setQuestionFilter(f, btnEl) {
+    currentQFilter = f;
+    document.querySelectorAll('.q-pill').forEach(b => b.classList.remove('active'));
+    btnEl.classList.add('active');
+    renderQuestions();
+  }
+
+  function toggleSelfTestMode() {
+    selfTestMode = !selfTestMode;
+    const btn = document.getElementById('selfTestBtn');
+    btn.classList.toggle('active-mode', selfTestMode);
+    btn.innerHTML = selfTestMode ? '👁️ सभी उत्तर दिखाएँ' : '🙈 सेल्फ-टेस्ट मोड (उत्तर छुपाएँ)';
+    renderQuestions();
+  }
+
+  function updateGlobalStats() {
+    let totalQ = 0, totalPYQ = 0, totalDone = 0;
+    Object.keys(masterQAData).forEach(chKey => {
+      const list = masterQAData[chKey] || [];
+      list.forEach((item, idx) => {
+        totalQ++;
+        if (item.isPYQ) totalPYQ++;
+        if (masteredMap[`${chKey}_${idx}`]) totalDone++;
+      });
+    });
+
+    const rem = totalQ - totalDone;
+    const pct = totalQ > 0 ? Math.round((totalDone / totalQ) * 100) : 0;
+
+    document.getElementById('statTotal').textContent = totalQ;
+    document.getElementById('statPYQ').textContent = totalPYQ;
+    document.getElementById('statDone').textContent = totalDone;
+    document.getElementById('statRem').textContent = rem;
+    document.getElementById('progressBar').style.width = pct + '%';
+  }
+
+  function renderQuestions() {
+    const container = document.getElementById('qaListContainer');
+    const list = masterQAData[currentChapter] || [];
+    const query = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+
+    document.getElementById('cntAll').textContent = list.length;
+    document.getElementById('cntPYQ').textContent = list.filter(x => x.isPYQ).length;
+
+    const filtered = [];
+    list.forEach((item, originalIdx) => {
+      let matchFilter = true;
+      if (currentQFilter === 'pyq') matchFilter = item.isPYQ;
+      else if (currentQFilter === '2026') matchFilter = item.cat.includes('2026');
+      else if (currentQFilter === '2025') matchFilter = item.cat.includes('2025');
+      else if (currentQFilter === '2024') matchFilter = item.cat.includes('2024');
+      else if (currentQFilter === 'intext') matchFilter = item.cat.includes('आंतरिक') || item.cat.includes('क्रियाकलाप');
+      else if (currentQFilter === 'exercise') matchFilter = item.cat.includes('अभ्यास');
+
+      const matchQuery = !query || item.q.toLowerCase().includes(query) || item.a.toLowerCase().includes(query) || item.cat.toLowerCase().includes(query);
+      if (matchFilter && matchQuery) {
+        filtered.push({ ...item, originalIdx });
+      }
+    });
+
+    if (filtered.length === 0) {
+      container.innerHTML = `<div class="qa-card"><div class="qa-question-text">इस फ़िल्टर या खोज शब्द के लिए कोई प्रश्न नहीं मिला। कृपया ऊपर 'सभी प्रश्न' पर क्लिक करें।</div></div>`;
+      return;
+    }
+
+    container.innerHTML = filtered.map((item, displayIdx) => {
+      const key = `${currentChapter}_${item.originalIdx}`;
+      const isMastered = !!masteredMap[key];
+      const speechPayload = encodeURIComponent(cleanSpeechText(`प्रश्न: ${item.q} उत्तर: ${item.a}`));
+      const waPayload = encodeURIComponent(`📝 *GYANU AI By Rishi Sir* — कक्षा 10 विज्ञान प्रश्नोत्तर बैंक
+*${chaptersMeta[currentChapter].title}*
+*(${item.cat})*
+
+❓ *प्रश्न:* ${cleanSpeechText(item.q)}
+✅ *उत्तर:* ${cleanSpeechText(item.a)}`);
+
+      return `
+        <div class="qa-card ${item.isPYQ ? 'pyq-card' : ''} ${isMastered ? 'mastered-card' : ''} ${selfTestMode ? 'answer-masked' : ''}" id="qcard_${key}">
+          <div class="qa-card-header">
+            <div class="qa-badge-group">
+              <span class="q-num-pill">प्र. ${displayIdx + 1}</span>
+              <span class="cat-tag">${item.cat}</span>
+            </div>
+            <div class="qa-tools">
+              <button class="tool-circle-btn" onclick="speakQA('${speechPayload}')" title="आवाज़ में सुनें">🔊</button>
+              <button class="tool-circle-btn" onclick="toggleSingleAnswer('${key}')" title="उत्तर छुपाएँ / दिखाएँ">👁️</button>
+            </div>
+          </div>
+
+          <div class="qa-question-text">${formatMathAndChem(item.q)}</div>
+
+          <div class="qa-answer-box ${selfTestMode ? 'hidden-answer' : ''}" id="ans_${key}" onclick="revealAnswer('${key}')">
+            <strong>उत्तर:</strong> ${formatMathAndChem(item.a)}
+          </div>
+          <span class="reveal-hint" onclick="revealAnswer('${key}')">👆 उत्तर देखने के लिए यहाँ या धुंधले बॉक्स पर टैप करें</span>
+
+          <div class="qa-card-footer">
+            <button class="qa-foot-btn btn-done ${isMastered ? 'is-mastered' : ''}" onclick="toggleMastered('${key}')">
+              ${isMastered ? '✅ तैयार हो गया (Mastered)' : '☑️ याद हो गया टिक करें'}
+            </button>
+            <a href="https://wa.me/?text=${waPayload}" target="_blank" rel="noopener noreferrer" class="qa-foot-btn btn-wa">
+              📲 WhatsApp पर शेयर करें
+            </a>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function toggleSingleAnswer(key) {
+    const ansBox = document.getElementById('ans_' + key);
+    const card = document.getElementById('qcard_' + key);
+    if (!ansBox) return;
+    ansBox.classList.toggle('hidden-answer');
+    card.classList.toggle('answer-masked', ansBox.classList.contains('hidden-answer'));
+  }
+
+  function revealAnswer(key) {
+    const ansBox = document.getElementById('ans_' + key);
+    const card = document.getElementById('qcard_' + key);
+    if (ansBox && ansBox.classList.contains('hidden-answer')) {
+      ansBox.classList.remove('hidden-answer');
+      card.classList.remove('answer-masked');
+    }
+  }
+
+  function toggleMastered(key) {
+    if (masteredMap[key]) {
+      delete masteredMap[key];
+    } else {
+      masteredMap[key] = true;
+      launchConfetti();
+    }
+    try {
+      localStorage.setItem(STORAGE_KEY_MASTERED, JSON.stringify(masteredMap));
+    } catch (e) {}
+    updateGlobalStats();
+    renderQuestions();
+  }
+
+  function speakQA(encodedText) {
+    if (!('speechSynthesis' in window)) return;
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(decodeURIComponent(encodedText));
+    utter.lang = 'hi-IN';
+    utter.rate = 0.95;
+    window.speechSynthesis.speak(utter);
+  }
+
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    try { localStorage.setItem(STORAGE_KEY_DARK, isDark); } catch (e) {}
+    document.getElementById('themeBtn').innerHTML = isDark ? '☀️ लाइट मोड' : '🌙 नाइट मोड';
+  }
+
+  function resetProgress() {
+    if (confirm('क्या आप वाकई सभी 13 अध्यायों की प्रश्नोत्तर प्रोग्रेस को रीसेट करना चाहते हैं?')) {
+      masteredMap = {};
+      try { localStorage.removeItem(STORAGE_KEY_MASTERED); } catch (e) {}
+      updateGlobalStats();
+      renderQuestions();
+    }
+  }
+
+  function launchConfetti() {
+    const colors = ['#f97316', '#2563eb', '#16a34a', '#eab308', '#ec4899'];
+    for (let i = 0; i < 26; i++) {
+      const el = document.createElement('div');
+      el.className = 'confetti-piece';
+      el.style.left = Math.random() * 100 + 'vw';
+      el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      el.style.animationDuration = (1.5 + Math.random() * 1.5) + 's';
+      document.body.appendChild(el);
+      setTimeout(() => el.remove(), 3000);
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', initQABank);
+</script>
+</body>
+</html>
